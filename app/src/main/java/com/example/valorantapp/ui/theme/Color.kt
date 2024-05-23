@@ -11,6 +11,6 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 // My custom colors
-val Black = Color(0xFF000000)
-val Red = Color(0xFFC41111)
-val White = Color(0xFFFFFFFF)
+val black = Color(0xFF000000)
+val red = Color(0xFFC41111)
+val white = Color(0xFFFFFFFF)
