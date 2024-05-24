@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.home.components
+package com.example.valorantapp.ui.presentation.pages.home.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu

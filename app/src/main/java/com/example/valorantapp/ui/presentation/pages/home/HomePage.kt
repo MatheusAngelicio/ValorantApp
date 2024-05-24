@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.home
+package com.example.valorantapp.ui.presentation.pages.home
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.DrawerValue
@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.example.valorantapp.ui.presentation.home.components.ModalDrawerSheetComponent
-import com.example.valorantapp.ui.presentation.home.components.TopBarComponent
+import com.example.valorantapp.ui.presentation.pages.home.components.ModalDrawerSheetComponent
+import com.example.valorantapp.ui.presentation.pages.home.components.TopBarComponent
 
 @Composable
 fun HomePage() {

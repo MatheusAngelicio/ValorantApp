@@ -1,20 +1,19 @@
-package com.example.valorantapp.ui.presentation.home.pages.agents
+package com.example.valorantapp.common.components.template
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.valorantapp.ui.theme.black
 
 @Composable
-fun AgentsPage() {
+fun ValorantPageTemplateComponent(content: @Composable BoxScope.() -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(black)
-    ){
-        Text(text = "Agents Page")
-    }
+            .background(black),
+        content = content
+    )
 }

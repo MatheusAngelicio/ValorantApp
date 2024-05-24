@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.home.navigationItem
+package com.example.valorantapp.ui.presentation.pages.home.navigationItem
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build

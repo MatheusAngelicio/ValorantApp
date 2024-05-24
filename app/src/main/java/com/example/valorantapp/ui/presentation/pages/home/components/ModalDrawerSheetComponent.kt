@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.home.components
+package com.example.valorantapp.ui.presentation.pages.home.components
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -18,7 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
-import com.example.valorantapp.ui.presentation.home.navigationItem.navigationItems
+import com.example.valorantapp.ui.presentation.pages.home.navigationItem.navigationItems
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

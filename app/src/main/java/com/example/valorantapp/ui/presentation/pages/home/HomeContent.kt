@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.home
+package com.example.valorantapp.ui.presentation.pages.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -8,10 +8,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.valorantapp.ui.presentation.home.navigationItem.navigationItems
-import com.example.valorantapp.ui.presentation.home.pages.agents.AgentsPage
-import com.example.valorantapp.ui.presentation.home.pages.favorites.FavoritesPage
-import com.example.valorantapp.ui.presentation.home.pages.weapons.WeaponsPage
+import com.example.valorantapp.ui.presentation.pages.home.navigationItem.navigationItems
+import com.example.valorantapp.ui.presentation.pages.home.pages.agents.AgentsPage
+import com.example.valorantapp.ui.presentation.pages.home.pages.favorites.FavoritesPage
+import com.example.valorantapp.ui.presentation.pages.home.pages.weapons.WeaponsPage
 import com.example.valorantapp.ui.presentation.navigation.Routes
 
 @Composable

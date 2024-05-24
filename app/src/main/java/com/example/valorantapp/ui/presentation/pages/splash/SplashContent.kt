@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presentation.splash
+package com.example.valorantapp.ui.presentation.pages.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
