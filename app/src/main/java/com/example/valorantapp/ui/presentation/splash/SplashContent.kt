@@ -21,7 +21,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.valorantapp.R
-import com.example.valorantapp.common.components.button.RoundedButton
+import com.example.valorantapp.common.components.button.ValorantButton
 import com.example.valorantapp.ui.presentation.navigation.Routes.homePageRoute
 import com.example.valorantapp.ui.presentation.navigation.Routes.splashPageRoute
 
@@ -58,7 +58,7 @@ fun SplashContent(navController: NavController) {
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                RoundedButton(
+                ValorantButton(
                     text = stringResource(id = R.string.start),
                     onClick = {
                         navController.navigate(homePageRoute) {
