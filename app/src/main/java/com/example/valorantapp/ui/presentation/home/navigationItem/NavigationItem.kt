@@ -1,12 +1,12 @@
 package com.example.valorantapp.ui.presentation.home.navigationItem
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.Info
-import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.filled.Build
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.Face
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.valorantapp.ui.presentation.navigation.Routes.agentsPageRoute
 import com.example.valorantapp.ui.presentation.navigation.Routes.favoritesPageRoute
@@ -23,19 +23,19 @@ val navigationItems = listOf(
     NavigationItem(
         title = "Agents",
         route = agentsPageRoute,
-        selectedIcon = Icons.Filled.Home,
-        unselectedIcon = Icons.Outlined.Home
+        selectedIcon = Icons.Filled.Face,
+        unselectedIcon = Icons.Outlined.Face
     ),
     NavigationItem(
         title = "Weapons",
         route = weaponsPageRoute,
-        selectedIcon = Icons.Filled.Info,
-        unselectedIcon = Icons.Outlined.Info,
+        selectedIcon = Icons.Filled.Build,
+        unselectedIcon = Icons.Outlined.Build,
     ),
     NavigationItem(
         title = "Favorites",
         route = favoritesPageRoute,
-        selectedIcon = Icons.Filled.Settings,
-        unselectedIcon = Icons.Outlined.Settings
+        selectedIcon = Icons.Filled.Favorite,
+        unselectedIcon = Icons.Outlined.FavoriteBorder
     )
 )
