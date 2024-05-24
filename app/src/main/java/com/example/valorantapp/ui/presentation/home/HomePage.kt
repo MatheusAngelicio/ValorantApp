@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presenter.home
+package com.example.valorantapp.ui.presentation.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

@@ -11,9 +11,9 @@ import androidx.compose.ui.unit.dp
 import com.example.valorantapp.ui.theme.red
 
 @Composable
-fun RoundedButton(text: String) {
+fun RoundedButton(text: String,  onClick: () -> Unit) {
     Button(
-        onClick = { /* Handle button click */ },
+        onClick = onClick,
         colors = ButtonDefaults.buttonColors(red),
         modifier = Modifier
             .padding(bottom = 16.dp)
@@ -23,5 +23,4 @@ fun RoundedButton(text: String) {
             fontFamily = FontFamily.Monospace
         )
     }
-
 }

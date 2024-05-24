@@ -1,4 +1,4 @@
-package com.example.valorantapp.ui.presenter.splash
+package com.example.valorantapp.ui.presentation.splash
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -15,15 +15,18 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.valorantapp.R
 import com.example.valorantapp.common.components.button.RoundedButton
+import com.example.valorantapp.ui.presentation.navigation.Routes.homePageRoute
+import com.example.valorantapp.ui.presentation.navigation.Routes.splashPageRoute
 
 @Composable
-fun SplashContent() {
+fun SplashContent(navController: NavController) {
     val composition by rememberLottieComposition(
         spec = LottieCompositionSpec.RawRes(
             resId = R.raw.splash_animation
@@ -55,7 +58,14 @@ fun SplashContent() {
                 contentAlignment = Alignment.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                RoundedButton(stringResource(id = R.string.start))
+                RoundedButton(
+                    text = stringResource(id = R.string.start),
+                    onClick = {
+                        navController.navigate(homePageRoute) {
+                            popUpTo(splashPageRoute) { inclusive = true }
+                        }
+                    }
+                )
             }
         }
     }
