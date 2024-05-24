@@ -3,6 +3,7 @@ package com.example.valorantapp.ui.presentation.home.pages.agents
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.valorantapp.ui.theme.black
@@ -13,5 +14,7 @@ fun AgentsPage() {
         modifier = Modifier
             .fillMaxSize()
             .background(black)
-    )
+    ){
+        Text(text = "Agents Page")
+    }
 }
