@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.navOptions
 import com.example.valorantapp.ui.presentation.home.navigationItem.navigationItems
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -40,7 +41,14 @@ fun ModalDrawerSheetComponent(
                     scope.launch {
                         drawerState.close()
                     }
-                    navController.navigate(item.route)
+                    // Configuração para tirar a pagina da pilha conforme navego entre elas
+                    val navOptions = navOptions {
+                        popUpTo(navController.currentDestination?.id ?: return@navOptions) {
+                            inclusive = true
+                        }
+                        launchSingleTop = true
+                    }
+                    navController.navigate(item.route, navOptions)
                 },
                 icon = {
                     Icon(

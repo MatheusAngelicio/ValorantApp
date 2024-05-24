@@ -22,6 +22,7 @@ fun HomePage() {
         val scope = rememberCoroutineScope()
         val navController = rememberNavController()
 
+        // Responsavel por gerenciar a navegaçao entre as paginas do drawer
         ModalNavigationDrawer(
             drawerContent = {
                 ModalDrawerSheetComponent(
@@ -34,9 +35,12 @@ fun HomePage() {
         ) {
             Scaffold(
                 topBar = {
+                    // Componente da TopBar
                     TopBarComponent(drawerState = drawerState, scope = scope)
                 }
             ) { paddingValues ->
+
+                // Conteudo da pagina
                 HomeContent(
                     paddingValues = paddingValues,
                     navController = navController
