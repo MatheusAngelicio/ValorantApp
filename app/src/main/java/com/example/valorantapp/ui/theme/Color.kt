@@ -12,5 +12,12 @@ val Pink40 = Color(0xFF7D5260)
 
 // My custom colors
 val black = Color(0xFF000000)
-val red = Color(0xFFC41111)
 val white = Color(0xFFFFFFFF)
+val lightGrey = Color(0xFFE0DEDE)
+val redLight = Color(0xFFF1CDCD)
+val red = Color(0xFFaf162a)
+val red2 = Color(0xFF95003a)
+val red3 = Color(0xFF830024)
+val purple = Color(0xFF5a0e3d)
+val browm = Color(0xFF44021e)
+

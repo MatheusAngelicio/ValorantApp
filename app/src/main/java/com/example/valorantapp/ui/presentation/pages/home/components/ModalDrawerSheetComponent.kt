@@ -19,6 +19,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
 import com.example.valorantapp.ui.presentation.pages.home.navigationItem.navigationItems
+import com.example.valorantapp.ui.theme.lightGrey
+import com.example.valorantapp.ui.theme.white
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -30,7 +32,9 @@ fun ModalDrawerSheetComponent(
 ) {
     var selectedItemIndex by rememberSaveable { mutableStateOf(0) }
 
-    ModalDrawerSheet {
+    ModalDrawerSheet (
+        drawerContainerColor = lightGrey,
+    ) {
         Spacer(modifier = Modifier.height(16.dp))
         navigationItems.forEachIndexed { index, item ->
             NavigationDrawerItem(
@@ -60,6 +64,10 @@ fun ModalDrawerSheetComponent(
                         contentDescription = item.title
                     )
                 },
+                colors = NavigationDrawerItemDefaults.colors(
+                    selectedContainerColor = white,
+                    unselectedContainerColor = lightGrey
+                ),
                 modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding)
             )
         }
