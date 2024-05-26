@@ -15,9 +15,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.navOptions
+import com.example.valorantapp.common.utils.ValorantSpacing
 import com.example.valorantapp.ui.presentation.pages.home.navigationItem.navigationItems
 import com.example.valorantapp.ui.theme.lightGrey
 import com.example.valorantapp.ui.theme.white
@@ -32,10 +32,10 @@ fun ModalDrawerSheetComponent(
 ) {
     var selectedItemIndex by rememberSaveable { mutableStateOf(0) }
 
-    ModalDrawerSheet (
+    ModalDrawerSheet(
         drawerContainerColor = lightGrey,
     ) {
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(ValorantSpacing.medium))
         navigationItems.forEachIndexed { index, item ->
             NavigationDrawerItem(
                 label = { Text(text = item.title) },

@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
@@ -22,6 +21,7 @@ import com.airbnb.lottie.compose.LottieConstants
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.valorantapp.R
 import com.example.valorantapp.common.components.button.ValorantButton
+import com.example.valorantapp.common.utils.ValorantSpacing
 import com.example.valorantapp.ui.presentation.navigation.Routes.homePageRoute
 import com.example.valorantapp.ui.presentation.navigation.Routes.splashPageRoute
 
@@ -52,7 +52,7 @@ fun SplashContent(navController: NavController) {
                 contentScale = ContentScale.Fit,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp)
+                    .padding(top = ValorantSpacing.medium)
             )
             Box(
                 contentAlignment = Alignment.Center,
