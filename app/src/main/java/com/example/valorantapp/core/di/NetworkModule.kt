@@ -63,16 +63,16 @@ object NetworkModule {
 
     // essa funcao é responsavel por criar uma instancia do retrofit com a baseurl
     // e vai retornar meu MovieService por de baixo dos panos tudo configurado
-//    @Provides
-//    fun provideMovieService(
-//        client: OkHttpClient,
-//        converterFactory: GsonConverterFactory
-//    ): MovieService {
-//        return Retrofit.Builder()
-//            .baseUrl(BuildConfig.BASE_URL)
-//            .client(client)
-//            .addConverterFactory(converterFactory)
-//            .build()
-//            .create(MovieService::class.java)
-//    }
+    @Provides
+    fun provideMovieService(
+        client: OkHttpClient,
+        converterFactory: GsonConverterFactory
+    ): MovieService {
+        return Retrofit.Builder()
+            .baseUrl(BuildConfig.BASE_URL)
+            .client(client)
+            .addConverterFactory(converterFactory)
+            .build()
+            .create(MovieService::class.java)
+    }
 }
