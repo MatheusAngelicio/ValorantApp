@@ -2,6 +2,7 @@ package com.example.valorantapp.di
 
 
 import com.example.valorantapp.BuildConfig
+import com.example.valorantapp.data.network.interceptor.ParamsInterceptor
 import com.example.valorantapp.data.service.ValorantService
 import dagger.Module
 import dagger.Provides
@@ -20,8 +21,8 @@ object NetworkModule {
     private const val TIMOUT_SECONDS = 15L
 
     @Provides
-    fun providesParamsInterceptor(): com.example.valorantapp.data.datasource.remote.interceptor.ParamsInterceptor {
-        return com.example.valorantapp.data.datasource.remote.interceptor.ParamsInterceptor()
+    fun providesParamsInterceptor(): ParamsInterceptor {
+        return ParamsInterceptor()
     }
 
     // Configurando para mostrar as requisicoes no log
@@ -44,7 +45,7 @@ object NetworkModule {
 
     @Provides
     fun provideOkHttpClient(
-        paramsInterceptor: com.example.valorantapp.data.datasource.remote.interceptor.ParamsInterceptor,
+        paramsInterceptor: ParamsInterceptor,
         loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {
         return OkHttpClient.Builder()
