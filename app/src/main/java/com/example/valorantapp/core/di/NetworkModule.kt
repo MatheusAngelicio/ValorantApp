@@ -2,6 +2,7 @@ package com.example.valorantapp.core.di
 
 
 import com.example.valorantapp.BuildConfig
+import com.example.valorantapp.core.data.remote.ValorantService
 import com.example.valorantapp.core.data.remote.interceptor.ParamsInterceptor
 import dagger.Module
 import dagger.Provides
@@ -9,6 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -67,12 +69,12 @@ object NetworkModule {
     fun provideMovieService(
         client: OkHttpClient,
         converterFactory: GsonConverterFactory
-    ): MovieService {
+    ): ValorantService {
         return Retrofit.Builder()
             .baseUrl(BuildConfig.BASE_URL)
             .client(client)
             .addConverterFactory(converterFactory)
             .build()
-            .create(MovieService::class.java)
+            .create(ValorantService::class.java)
     }
 }
