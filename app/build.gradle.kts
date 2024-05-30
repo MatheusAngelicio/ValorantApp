@@ -1,7 +1,16 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.kotlinAndroidKsp)
+    alias(libs.plugins.hiltAndroid)
 }
+
+val apiKeyPropertiesFile = rootProject.file("apikey.properties")
+val apiKeyProperties = Properties()
+apiKeyProperties.load(FileInputStream(apiKeyPropertiesFile))
 
 android {
     namespace = "com.example.valorantapp"
@@ -15,6 +24,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField ("String", "BASE_URL", apiKeyProperties["BASE_URL"] as String)
+
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -38,6 +49,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -69,5 +81,15 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation (libs.lottie)
+
+    //DI - Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    // Retrofit
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.okhttp)
+    implementation (libs.logging.interceptor)
 
 }
